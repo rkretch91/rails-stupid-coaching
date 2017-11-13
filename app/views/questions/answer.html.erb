@@ -1,0 +1,20 @@
+<html>
+  <head>
+  </head>
+
+  <body>
+    <h2><%= @questions %></h2>
+    <h3>-You</h3>
+    <h2>
+      <%= if @questions.downcase == "i am going to work right now!"
+        ""
+      elsif @questions.end_with?("?")
+        "Silly question, get dressed and go to work!"
+      else
+        "I don't care, get dressed and go to work!"
+      end %>
+    </h2>
+    <h3>-Your coach</h3>
+    <h3><%= link_to "Ask a new question", "/ask" %></h3>
+  </body>
+</html>
